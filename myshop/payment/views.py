@@ -7,8 +7,8 @@ from orders.models import Order
 
 
 # Create the stripe instance 
-stipe.api_key=settings.STRIPE_SECRET_KEY
-stipe.api_version =settings.STRIPE_API_VERSION
+stripe.api_key=settings.STRIPE_SECRET_KEY
+stripe.api_version =settings.STRIPE_API_VERSION
 
 def payment_process(request):
     order_id=request.session.get('order_id',None)
@@ -34,7 +34,7 @@ def payment_process(request):
         for item in order.items.all():
             session_data['line_items'].append({
                 'price_data':{
-                    'unit_amout':int(item.price *Decimal('100')),
+                    'unit_amount':int(item.price * Decimal('100')),
                     'currency':'usd',
                     'product_data':{
                         'name':item.product.name,
@@ -47,7 +47,7 @@ def payment_process(request):
         #redirect to Stripe payment form
         return redirect(session.url, code=303)
     else:
-        return render(request, 'payment/process.html',locals())
+        return render(request,'payment/process.html', locals())
 
 def payment_completed(request):
     return render(request, 'payment/completed.html')
