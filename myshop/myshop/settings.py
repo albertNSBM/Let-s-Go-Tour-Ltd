@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "shop.apps.ShopConfig",
     "cart.apps.CartConfig",
     "orders.apps.OrdersConfig",
+    "payment.apps.PaymentConfig",
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_URL='media/'
 MEDIA_ROOT=BASE_DIR / 'media'
 CART_SESSION_ID='cart'
+
+# Stripe library files
+STRIPE_PUBLISHABLE_KEY='pk_test_51OWx5xGj7XByQpPgMhiKOtLzcBfEhzgTHuCtHsRj3aN8KnSeQGTpTTcIPkAhufKVJ0hbYSvPx59uEXa09DeBPkBH00phnI4zIV'
+STRIPE_SECRET_KEY='sk_test_51OWx5xGj7XByQpPgtKlgBDBOmnAbKa8xPKw1HWJJroGU6qTxauJu1SFi0h1e8fHhLeOgDUvouUZn65LfPGQAa1fU00OKa5RTBN'
+STRIPE_API_VERSION='2022-08-01'
