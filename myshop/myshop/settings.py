@@ -134,3 +134,7 @@ CART_SESSION_ID='cart'
 STRIPE_PUBLISHABLE_KEY='pk_test_51OWx5xGj7XByQpPgMhiKOtLzcBfEhzgTHuCtHsRj3aN8KnSeQGTpTTcIPkAhufKVJ0hbYSvPx59uEXa09DeBPkBH00phnI4zIV'
 STRIPE_SECRET_KEY='sk_test_51OWx5xGj7XByQpPgtKlgBDBOmnAbKa8xPKw1HWJJroGU6qTxauJu1SFi0h1e8fHhLeOgDUvouUZn65LfPGQAa1fU00OKa5RTBN'
 STRIPE_API_VERSION='2022-08-01'
+#robbitmq
+#CELERY_BROKER_URL='amqp://localhost'
+# Email backend 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
