@@ -5,3 +5,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'myshop.settings')
 app = Celery('myshop')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
+CELERYD_TASK_SOFT_TIME_LIMIT = 31622400
+CELERYD_TASK_TIME_LIMIT = 31622400

@@ -121,6 +121,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / 'static'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -139,3 +141,11 @@ STRIPE_WEBHOOK_SECRET='whsec_865c511457a690a056c135c407abdc95b874886fdd3f9efcc98
 #CELERY_BROKER_URL='amqp://localhost'
 # Email backend 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Email server configuration
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'albertnsaba2018@gmail.com'
+# EMAIL_HOST_PASSWORD = 'tuog hwrj mawh ojwm'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
